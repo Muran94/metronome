@@ -1,0 +1,55 @@
+body {
+  font-size: 13px;
+  font-family: Arial;
+  text-align: center;
+  margin: 30px auto;
+  color: #0e0e0e;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul > li {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ddd;
+}
+ul > li + li {
+  margin-left: 5px;
+}
+ul > li:first-child {
+  background: #aaa;
+}
+ul > li.flash {
+  background: #0af;
+  box-shadow: 0 0 5px #0af;
+}
+input[type="text"] {
+  padding: 5px;
+  border-radius: 2px;
+  border: 1px solid #0af;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+}
+#start, #stop {
+  margin: 20px auto;
+  padding: 5px;
+  width: 150px;
+  border-radius: 2px;
+  color: #fff;
+}
+#start {
+  background: #0af;
+}
+#stop {
+  background: #0e0e0e;
+}
+#start:hover, #stop:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity .2s;
+}

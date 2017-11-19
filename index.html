@@ -4,9 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue"></script>
   <title>Vue.js Metronome</title>
 </head>
 <body>
 
+  <div id="metronome">
+    <div id="flash-light-container">
+      <ul>
+        <li v-for="flash_light in flash_lights" :class="{ flash: flash_light.on }"></li>
+      </ul>
+    </div>
+    <input type="text" v-model="beat" pattern="\d*" maxlength="1" placeholder="拍子" width=25>
+    <input type="text" v-model="bpm" pattern="\d*" maxlength="3" placeholder="BPMを入力" width=75>
+    <div id="start" v-if="!metronome_running" v-on:click="start">START</div>
+    <div id="stop" v-if="metronome_running" v-on:click="stop">STOP</div>
+  </div>
+
+  <script src="vue.js"></script>
 </body>
 </html>
